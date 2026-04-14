@@ -162,7 +162,7 @@ body { background: var(--cream); color: var(--ink); font-family: var(--body); }
   position: relative; z-index: 2;
   width: 90%; max-width: var(--max-w);
   margin: 0 auto;
-  padding: 0 0 7rem;
+  padding: 10rem 0 7rem;
 }
 
 .hero__eyebrow {
