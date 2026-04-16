@@ -1,338 +1,296 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Nadia Osei — Wealth & Legacy Coaching</title>
-  <link rel="stylesheet" href="styles.css" />
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,700;1,400;1,700&family=Jost:wght@200;300;400;500&family=Cormorant:ital,wght@0,300;1,300;1,400&display=swap" rel="stylesheet" />
+
+<html class="scroll-smooth" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>NADIA OSEI | Private Wealth &amp; Legacy Coaching</title>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,200..800;1,6..72,200..800&amp;family=Work+Sans:ital,wght@0,100..900;1,100..900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "error-container": "#ffdad6",
+                    "background": "#fbf9f4",
+                    "on-error-container": "#93000a",
+                    "on-tertiary": "#ffffff",
+                    "surface": "#fbf9f4",
+                    "tertiary-container": "#362814",
+                    "surface-tint": "#615e59",
+                    "on-background": "#1b1c19",
+                    "on-tertiary-container": "#a48e74",
+                    "on-primary": "#ffffff",
+                    "surface-container": "#f0eee9",
+                    "secondary-fixed": "#fdddb9",
+                    "on-secondary": "#ffffff",
+                    "primary": "#171612",
+                    "surface-variant": "#e4e2dd",
+                    "inverse-on-surface": "#f2f1ec",
+                    "secondary-fixed-dim": "#e0c29f",
+                    "inverse-surface": "#30312e",
+                    "surface-bright": "#fbf9f4",
+                    "surface-dim": "#dbdad5",
+                    "primary-container": "#2c2a26",
+                    "tertiary": "#201404",
+                    "inverse-primary": "#cbc6c0",
+                    "secondary": "#715a3e",
+                    "on-tertiary-fixed": "#261907",
+                    "on-error": "#ffffff",
+                    "secondary-container": "#fdddb9",
+                    "on-secondary-container": "#786044",
+                    "on-primary-fixed": "#1d1b18",
+                    "on-primary-fixed-variant": "#494642",
+                    "outline": "#7b776e",
+                    "on-primary-container": "#95918b",
+                    "surface-container-lowest": "#ffffff",
+                    "on-surface": "#1b1c19",
+                    "surface-container-highest": "#e4e2dd",
+                    "error": "#ba1a1a",
+                    "primary-fixed-dim": "#cbc6c0",
+                    "on-secondary-fixed-variant": "#584329",
+                    "tertiary-fixed-dim": "#dbc3a6",
+                    "primary-fixed": "#e7e2db",
+                    "on-tertiary-fixed-variant": "#55442e",
+                    "on-secondary-fixed": "#281803",
+                    "tertiary-fixed": "#f8dec1",
+                    "on-surface-variant": "#4a463f",
+                    "outline-variant": "#ccc6bc",
+                    "surface-container-low": "#f5f3ee",
+                    "surface-container-high": "#eae8e3"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0px",
+                    "lg": "0px",
+                    "xl": "0px",
+                    "full": "9999px"
+            },
+            "fontFamily": {
+                    "headline": ["Newsreader", "serif"],
+                    "body": ["Work Sans", "sans-serif"],
+                    "label": ["Work Sans", "sans-serif"]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        body { font-family: 'Work Sans', sans-serif; background-color: #fbf9f4; color: #171612; }
+        h1, h2, h3, .newsreader { font-family: 'Newsreader', serif; }
+        .material-symbols-outlined { font-variation-settings: 'FILL' 0, 'wght' 300, 'GRAD' 0, 'opsz' 24; }
+        .no-scrollbar::-webkit-scrollbar { display: none; }
+    </style>
 </head>
-<body>
-
-  <!-- NAV -->
-  <nav class="nav" id="nav">
-    <a href="#" class="nav__logo">Nadia Osei</a>
-    <button class="nav__toggle" id="navToggle" aria-label="Menu">
-      <span></span><span></span>
-    </button>
-    <ul class="nav__links" id="navLinks">
-      <li><a href="#about">Story</a></li>
-      <li><a href="#method">Method</a></li>
-      <li><a href="#offer">Work With Me</a></li>
-      <li><a href="#words">Words</a></li>
-      <li><a href="#apply" class="nav__apply">Apply</a></li>
-    </ul>
-  </nav>
-
-  <!-- HERO — full bleed portrait + typographic overlay -->
-  <section class="hero" id="hero">
-    <!-- Portrait placeholder — replace with real image -->
-    <div class="hero__portrait" aria-hidden="true">
-      <div class="hero__portrait-inner"></div>
-    </div>
-
-    <!-- Overlay gradient -->
-    <div class="hero__overlay" aria-hidden="true"></div>
-
-    <!-- Content -->
-    <div class="hero__content">
-      <p class="hero__eyebrow reveal">Wealth Coach · Legacy Builder · London & Atlanta</p>
-      <h1 class="hero__heading reveal">
-        <span class="hero__heading-line">Your family</span>
-        <span class="hero__heading-line hero__heading-italic">built this far.</span>
-        <span class="hero__heading-line">You take it</span>
-        <span class="hero__heading-line hero__heading-accent">further.</span>
-      </h1>
-      <p class="hero__sub reveal">
-        Wealth coaching for first-generation builders who are done pretending that money is too complicated for people like us.
-      </p>
-      <div class="hero__ctas reveal">
-        <a href="#apply" class="btn btn--terra">Begin Your Journey</a>
-        <a href="#about" class="btn btn--ghost">My Story</a>
-      </div>
-    </div>
-
-    <!-- Issue/edition label — magazine reference -->
-    <div class="hero__edition reveal">
-      <span>Legacy Edition</span>
-      <span>·</span>
-      <span>2025</span>
-    </div>
-  </section>
-
-  <!-- PULL QUOTE STRIP -->
-  <div class="quote-strip">
-    <div class="quote-strip__inner reveal">
-      <span class="quote-strip__mark">"</span>
-      <p>Generational wealth is not inherited. It is decided.</p>
-    </div>
-  </div>
-
-  <!-- ABOUT -->
-  <section class="about section" id="about">
-    <div class="container about__grid">
-      <div class="about__left">
-        <p class="label reveal">The Story</p>
-        <h2 class="section__heading reveal">
-          I was told wealth<br />wasn't <em>for us.</em><br />I disagreed.
-        </h2>
-        <p class="body-text reveal">
-          My grandmother came to London with nothing but determination and a borrowed suitcase. My mother bought her first property at 34. I built a seven-figure investment portfolio by 31. We did not inherit wealth. We built it — one intentional decision at a time.
-        </p>
-        <p class="body-text reveal" style="margin-top: 1.2rem;">
-          I coach first-generation wealth builders because I am one. I know the specific fear, the specific confusion, and the specific freedom that comes when you finally understand how money actually works.
-        </p>
-        <div class="about__credentials reveal">
-          <div class="about__cred">
-            <p class="about__cred-num">£4.2M</p>
-            <p class="about__cred-label">Client wealth built since 2019</p>
-          </div>
-          <div class="about__cred">
-            <p class="about__cred-num">140+</p>
-            <p class="about__cred-label">First-gen builders coached</p>
-          </div>
-          <div class="about__cred">
-            <p class="about__cred-num">3rd</p>
-            <p class="about__cred-label">Generation of builders in my family</p>
-          </div>
-        </div>
-      </div>
-      <div class="about__right reveal">
-        <div class="about__image-wrap">
-          <div class="about__image"></div>
-          <div class="about__image-caption">
-            <p>"The first generation clears the path.<br />The second runs it.<br />The third owns the land."</p>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- METHOD -->
-  <section class="method section" id="method">
-    <div class="container">
-      <div class="method__intro">
-        <p class="label reveal">The Method</p>
-        <h2 class="section__heading reveal">
-          Not theory.<br /><em>Lived strategy.</em>
-        </h2>
-      </div>
-      <div class="method__items">
-        <div class="method__item reveal">
-          <div class="method__item-marker">
-            <div class="method__item-dot"></div>
-            <div class="method__item-line"></div>
-          </div>
-          <div class="method__item-body">
-            <h3>Unlearn First</h3>
-            <p>Before we build, we identify the beliefs about money that were handed to you — the ones keeping your wealth ceiling exactly where it is. This is not therapy. It is diagnosis.</p>
-          </div>
-        </div>
-        <div class="method__item reveal">
-          <div class="method__item-marker">
-            <div class="method__item-dot"></div>
-            <div class="method__item-line"></div>
-          </div>
-          <div class="method__item-body">
-            <h3>Map the Territory</h3>
-            <p>A full picture of what you have, what you owe, what you earn, and what it could become. Most clients have never had this laid out plainly. It changes everything to see it clearly.</p>
-          </div>
-        </div>
-        <div class="method__item reveal">
-          <div class="method__item-marker">
-            <div class="method__item-dot"></div>
-            <div class="method__item-line"></div>
-          </div>
-          <div class="method__item-body">
-            <h3>Build the Blueprint</h3>
-            <p>A 5-year wealth plan built around your actual life — not a generic template. Property, ISAs, pensions, business equity. Specific, sequenced, and yours.</p>
-          </div>
-        </div>
-        <div class="method__item reveal">
-          <div class="method__item-marker">
-            <div class="method__item-dot"></div>
-          </div>
-          <div class="method__item-body">
-            <h3>Legacy Architecture</h3>
-            <p>Structuring what you build to outlast you. Wills, trusts, beneficiary planning, and the family conversations that make it all mean something beyond your lifetime.</p>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- OFFER -->
-  <section class="offer section" id="offer">
-    <div class="container">
-      <p class="label reveal">Pathways</p>
-      <h2 class="section__heading reveal">Choose how<br /><em>we begin.</em></h2>
-
-      <div class="offer__grid">
-        <div class="offer__card reveal">
-          <div class="offer__card-accent"></div>
-          <p class="offer__tier">Foundation</p>
-          <h3>The Clarity Session</h3>
-          <p class="offer__price">$750</p>
-          <p class="offer__desc">A single 90-minute session. We map your full financial picture and I tell you exactly where to focus first. One session, complete clarity.</p>
-          <ul class="offer__includes">
-            <li>90-minute deep dive session</li>
-            <li>Written action summary</li>
-            <li>Resource pack for your stage</li>
-          </ul>
-          <a href="#apply" class="btn btn--outline">Book a Session</a>
-        </div>
-
-        <div class="offer__card offer__card--featured reveal">
-          <div class="offer__card-accent offer__card-accent--gold"></div>
-          <p class="offer__tier">Signature</p>
-          <h3>The Legacy Programme</h3>
-          <p class="offer__price">$5,500 <span>/ 6 months</span></p>
-          <p class="offer__desc">My complete method. Six months of private coaching, a full wealth blueprint, investment guidance, and legacy planning. This is the work.</p>
-          <ul class="offer__includes">
-            <li>Bi-weekly 1:1 sessions</li>
-            <li>Bespoke 5-year wealth blueprint</li>
-            <li>Investment portfolio guidance</li>
-            <li>Legacy and estate planning</li>
-            <li>Voice note access between sessions</li>
-            <li>Private client community</li>
-          </ul>
-          <a href="#apply" class="btn btn--terra">Apply Now</a>
-        </div>
-
-        <div class="offer__card reveal">
-          <div class="offer__card-accent"></div>
-          <p class="offer__tier">Ongoing</p>
-          <h3>The Retainer</h3>
-          <p class="offer__price">$1,800 <span>/ month</span></p>
-          <p class="offer__desc">For graduates of the Legacy Programme and those ready for continuous strategic guidance. Monthly sessions, ongoing portfolio review, and priority access.</p>
-          <ul class="offer__includes">
-            <li>Monthly strategy session</li>
-            <li>Quarterly wealth review</li>
-            <li>Priority 48-hour response</li>
-            <li>Annual legacy audit</li>
-          </ul>
-          <a href="#apply" class="btn btn--outline">Apply</a>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- WORDS / TESTIMONIALS -->
-  <section class="words section" id="words">
-    <div class="container">
-      <p class="label reveal">Their Words</p>
-      <h2 class="section__heading reveal">What it feels like<br /><em>on the other side.</em></h2>
-
-      <div class="words__grid">
-        <div class="words__card reveal">
-          <p class="words__quote">"I came to Nadia earning £95K and feeling broke. I left with a pension, a property plan, and a relationship with money I never thought was possible for someone from my background."</p>
-          <div class="words__author">
-            <div class="words__avatar words__avatar--1"></div>
-            <div>
-              <p class="words__name">Adaeze C.</p>
-              <p class="words__role">Senior Nurse · NHS · London</p>
-            </div>
-          </div>
-        </div>
-        <div class="words__card reveal">
-          <p class="words__quote">"My parents never talked about money. Nadia taught me a language my family didn't have. I've started a JISA for my daughter. She will start ahead of where I did."</p>
-          <div class="words__author">
-            <div class="words__avatar words__avatar--2"></div>
-            <div>
-              <p class="words__name">Kezia B.</p>
-              <p class="words__role">Marketing Director · Atlanta</p>
-            </div>
-          </div>
-        </div>
-        <div class="words__card words__card--large reveal">
-          <p class="words__quote">"I was making good money and building nothing. That sentence hit me when Nadia said it in our first session. Twelve months later I have a £180K property portfolio and a plan that goes thirty years forward. This work is generational."</p>
-          <div class="words__author">
-            <div class="words__avatar words__avatar--3"></div>
-            <div>
-              <p class="words__name">Tolu A.</p>
-              <p class="words__role">Pharmacist & Property Investor · Birmingham</p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- APPLY -->
-  <section class="apply section" id="apply">
-    <div class="container">
-      <div class="apply__inner">
-        <div class="apply__left">
-          <p class="label reveal">Begin</p>
-          <h2 class="section__heading reveal">
-            Your family's<br />story changes<br /><em>here.</em>
-          </h2>
-          <p class="body-text reveal">Tell me where you are and where you want to go. I review every application personally and respond within 48 hours.</p>
-          <div class="apply__note reveal">
-            <p>Spaces in the Legacy Programme are limited to 8 clients per cohort. Applications close when filled.</p>
-          </div>
-        </div>
-        <div class="apply__form-wrap reveal">
-          <form id="applyForm" novalidate>
-            <div class="form__group">
-              <label>Full Name</label>
-              <input type="text" placeholder="Your name" required />
-            </div>
-            <div class="form__group">
-              <label>Email</label>
-              <input type="email" placeholder="your@email.com" required />
-            </div>
-            <div class="form__group">
-              <label>Where are you based?</label>
-              <input type="text" placeholder="City, Country" required />
-            </div>
-            <div class="form__group">
-              <label>Programme of Interest</label>
-              <select required>
-                <option value="" disabled selected>Choose a pathway</option>
-                <option>The Clarity Session ($750)</option>
-                <option>The Legacy Programme ($5,500)</option>
-                <option>The Retainer ($1,800/mo)</option>
-              </select>
-            </div>
-            <div class="form__group">
-              <label>What does building wealth mean to your family?</label>
-              <textarea rows="4" placeholder="Tell me your story. The more honest, the better I can help." required></textarea>
-            </div>
-            <button type="submit" class="btn btn--terra btn--full">Send My Application</button>
-            <p class="form__note">Reviewed personally. Response within 48 hours.</p>
-          </form>
-          <div class="form__success" id="formSuccess">
-            <div class="form__success-icon">✦</div>
-            <h3>Application received.</h3>
-            <p>Nadia will be in touch within 48 hours.</p>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- FOOTER -->
-  <footer class="footer">
-    <div class="container footer__inner">
-      <div class="footer__top">
-        <p class="footer__name">Nadia Osei</p>
-        <p class="footer__sub">Wealth · Legacy · First-Generation Builders</p>
-      </div>
-      <nav class="footer__nav">
-        <a href="#about">Story</a>
-        <a href="#method">Method</a>
-        <a href="#offer">Work With Me</a>
-        <a href="#words">Words</a>
-        <a href="#apply">Apply</a>
-      </nav>
-      <p class="footer__quote">"Your family built this far. You take it further."</p>
-      <p class="footer__legal">© 2025 Nadia Osei Wealth Ltd · London · Atlanta</p>
-    </div>
-  </footer>
-
-  <script src="script.js"></script>
-</body>
-</html>
+<body class="bg-surface text-on-surface">
+<!-- TopNavBar -->
+<nav class="fixed top-0 w-full z-50 bg-[#fbf9f4]/80 dark:bg-[#171612]/80 backdrop-blur-md">
+<div class="flex justify-between items-center px-6 md:px-12 py-6 w-full mx-auto">
+<div class="text-2xl font-serif tracking-tighter text-[#171612] dark:text-[#fbf9f4]">NADIA OSEI</div>
+<div class="hidden md:flex items-center space-x-12 font-serif italic tracking-tight">
+<a class="text-[#171612]/60 dark:text-[#fbf9f4]/60 hover:text-[#171612] dark:hover:text-[#fbf9f4] transition-colors duration-300" href="#story">Story</a>
+<a class="text-[#171612]/60 dark:text-[#fbf9f4]/60 hover:text-[#171612] dark:hover:text-[#fbf9f4] transition-colors duration-300" href="#method">Method</a>
+<a class="text-[#171612]/60 dark:text-[#fbf9f4]/60 hover:text-[#171612] dark:hover:text-[#fbf9f4] transition-colors duration-300" href="#pathways">Pathways</a>
+<a class="text-[#171612] dark:text-[#fbf9f4] border-b border-[#171612] dark:border-[#fbf9f4] pb-1" href="#apply">Apply</a>
+</div>
+<a class="bg-primary text-on-primary px-8 py-3 text-sm font-label uppercase tracking-widest hover:opacity-90 transition-opacity" href="#apply">
+                Inquire
+            </a>
+</div>
+</nav>
+<main class="pt-24">
+<!-- Hero Section -->
+<section class="min-h-[921px] flex flex-col justify-center px-6 md:px-12 lg:px-24 mb-32">
+<div class="max-w-7xl mx-auto w-full grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+<div class="lg:col-span-7">
+<h1 class="text-6xl md:text-8xl lg:text-9xl leading-[0.9] tracking-tighter font-headline mb-8">
+                        The <span class="italic">Architecture</span> of Legacy.
+                    </h1>
+<p class="text-lg md:text-xl font-body leading-relaxed text-on-surface-variant max-w-xl mb-12">
+                        Private wealth coaching for the visionary. We transcend traditional management to cultivate generational impact, defining wealth as a tool for enduring legacy.
+                    </p>
+<div class="flex items-center gap-8">
+<a class="underline underline-offset-8 decoration-1 text-sm font-label uppercase tracking-widest hover:text-secondary transition-colors" href="#apply">Begin the Journey</a>
+<span class="h-[1px] w-24 bg-outline-variant/30"></span>
+</div>
+</div>
+<div class="lg:col-span-5 relative">
+<div class="aspect-[4/5] bg-surface-container overflow-hidden shadow-2xl">
+<img alt="Professional editorial portrait of Nadia Osei, a visionary private wealth coach." class="w-full h-full object-cover object-center" src="https://lh3.googleusercontent.com/aida/ADBb0uihUoy3JgG4Clgp7MAFAqcHHoXnERdO0g0aldH0_N9-tNkRbHVEXsFe4TLVZ8Elw0MG6DSfRCMV91hsVsPT5UtBKE_fEH6Has8lNbzqDd4R0wZT1yDUuKCNlPjC4HFR70qXrL9_bswsWeeA27opm_YBcrvOTWZagNYfsABojflYvAJeOR_NxOdD5ddJlbaaMkYiaKNVXgOczwTvOm0Tb3pVCNxiESEN_HxKyuDgrOtQBJqJXn48FFZpl25VJT2XacYAr4ssLOZpzw"/>
+</div>
+<div class="absolute -bottom-8 -left-8 p-12 bg-surface-container-low hidden md:block border-l-4 border-secondary/20 shadow-xl">
+<p class="font-headline italic text-2xl text-secondary">"Wealth is not just what you keep, but what you leave behind."</p>
+</div>
+</div>
+</div>
+</section>
+<!-- Story Section -->
+<section class="py-32 bg-surface-container-low" id="story">
+<div class="max-w-7xl mx-auto px-6 md:px-12 lg:px-24">
+<div class="grid grid-cols-1 lg:grid-cols-2 gap-24 items-start">
+<div>
+<span class="text-[10px] font-label uppercase tracking-[0.3em] text-secondary mb-8 block">Origin</span>
+<h2 class="text-4xl md:text-5xl font-headline leading-tight mb-12">Bridging the gap between prosperity and purpose.</h2>
+<div class="space-y-8 font-body text-on-surface-variant leading-relaxed text-lg">
+<p>For over a decade, Nadia Osei has served as a silent architect for some of the most influential family offices. Her approach is not merely financial—it is anthropological.</p>
+<p>She understands that wealth, without a framework of values, is fragile. Nadia works at the intersection of psychology, strategy, and legacy planning to ensure your impact outlives your balance sheet.</p>
+</div>
+</div>
+<div class="relative pt-12 lg:pt-0">
+<!-- Pull Quote Component -->
+<div class="border-l-2 border-secondary-fixed-dim pl-12 py-4">
+<blockquote class="text-3xl md:text-4xl font-headline italic text-secondary leading-snug">
+                                "Our work is about removing the friction between your resources and your intentions. We build the scaffolding for a life well-lived and a legacy well-protected."
+                            </blockquote>
+<cite class="mt-8 block text-sm font-label uppercase tracking-widest text-on-surface">— Nadia Osei</cite>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Methodology (Method) -->
+<section class="py-32 bg-surface" id="method">
+<div class="max-w-7xl mx-auto px-6 md:px-12 lg:px-24">
+<div class="text-center mb-24">
+<span class="text-[10px] font-label uppercase tracking-[0.3em] text-secondary mb-4 block">The Philosophy</span>
+<h2 class="text-5xl md:text-6xl font-headline italic">The Method</h2>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-16">
+<div class="space-y-6">
+<div class="text-6xl font-headline text-surface-container-highest">01</div>
+<h3 class="text-2xl font-headline">Audit &amp; Alignment</h3>
+<p class="font-body text-on-surface-variant leading-relaxed">A deep dive into current structures, values, and the existing narrative of your wealth to identify hidden frictions.</p>
+</div>
+<div class="space-y-6">
+<div class="text-6xl font-headline text-surface-container-highest">02</div>
+<h3 class="text-2xl font-headline">The Blueprint</h3>
+<p class="font-body text-on-surface-variant leading-relaxed">Designing a bespoke strategy that integrates personal governance with long-term philanthropic and familial goals.</p>
+</div>
+<div class="space-y-6">
+<div class="text-6xl font-headline text-surface-container-highest">03</div>
+<h3 class="text-2xl font-headline">Legacy Execution</h3>
+<p class="font-body text-on-surface-variant leading-relaxed">Hands-on stewardship to implement the framework, ensuring every decision aligns with the north star of your legacy.</p>
+</div>
+</div>
+</div>
+</section>
+<!-- Pathways (Offerings) -->
+<section class="py-32 bg-surface-container" id="pathways">
+<div class="max-w-7xl mx-auto px-6 md:px-12 lg:px-24">
+<div class="mb-24 flex flex-col md:flex-row justify-between items-end gap-8">
+<div class="max-w-2xl">
+<span class="text-[10px] font-label uppercase tracking-[0.3em] text-secondary mb-4 block">Engagement</span>
+<h2 class="text-5xl md:text-6xl font-headline">Pathways to Impact.</h2>
+</div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-1">
+<!-- Clarity Session -->
+<div class="bg-surface p-12 flex flex-col h-full hover:bg-surface-container-low transition-colors group">
+<h3 class="text-2xl font-headline mb-4">The Clarity Session</h3>
+<p class="text-sm font-label uppercase tracking-widest text-secondary mb-8">Initial Strategy</p>
+<p class="font-body text-on-surface-variant mb-12 flex-grow">A high-impact, three-hour strategic audit designed to solve a singular legacy bottleneck or clarify immediate philanthropic intent.</p>
+<a class="group-hover:translate-x-2 transition-transform inline-flex items-center gap-4 text-sm font-label uppercase tracking-widest" href="#apply">
+                            Inquire <span class="material-symbols-outlined text-sm">arrow_forward</span>
+</a>
+</div>
+<!-- Legacy Programme -->
+<div class="bg-primary text-on-primary p-12 flex flex-col h-full hover:bg-primary-container transition-colors group">
+<h3 class="text-2xl font-headline mb-4">The Legacy Programme</h3>
+<p class="text-sm font-label uppercase tracking-widest text-on-primary-container mb-8">6-Month Transformation</p>
+<p class="font-body text-on-primary-container mb-12 flex-grow">Our signature container. A comprehensive overhaul of your wealth narrative, governance, and intergenerational communication strategy.</p>
+<a class="group-hover:translate-x-2 transition-transform inline-flex items-center gap-4 text-sm font-label uppercase tracking-widest" href="#apply">
+                            Inquire <span class="material-symbols-outlined text-sm">arrow_forward</span>
+</a>
+</div>
+<!-- The Retainer -->
+<div class="bg-surface p-12 flex flex-col h-full hover:bg-surface-container-low transition-colors group">
+<h3 class="text-2xl font-headline mb-4">The Retainer</h3>
+<p class="text-sm font-label uppercase tracking-widest text-secondary mb-8">Annual Partnership</p>
+<p class="font-body text-on-surface-variant mb-12 flex-grow">Ongoing strategic advisory for individuals and families who require a permanent architectural voice in their wealth ecosystem.</p>
+<a class="group-hover:translate-x-2 transition-transform inline-flex items-center gap-4 text-sm font-label uppercase tracking-widest" href="#apply">
+                            Inquire <span class="material-symbols-outlined text-sm">arrow_forward</span>
+</a>
+</div>
+</div>
+</div>
+</section>
+<!-- Testimonials -->
+<section class="py-32 bg-surface">
+<div class="max-w-5xl mx-auto px-6 md:px-12 lg:px-24">
+<div class="text-center mb-24">
+<span class="text-[10px] font-label uppercase tracking-[0.3em] text-secondary mb-4 block">Reflections</span>
+<h2 class="text-5xl font-headline italic">Words</h2>
+</div>
+<div class="space-y-32">
+<div class="text-center max-w-3xl mx-auto">
+<p class="text-2xl md:text-3xl font-headline leading-relaxed italic mb-8">"Nadia didn't just help me manage my assets; she helped me manage my meaning. For the first time, our family has a shared vision that transcends the capital."</p>
+<p class="text-[10px] font-label uppercase tracking-[0.2em] text-on-surface-variant">— Forbes 400 Principal</p>
+</div>
+<div class="text-center max-w-3xl mx-auto">
+<p class="text-2xl md:text-3xl font-headline leading-relaxed italic mb-8">"An unparalleled ability to navigate the complex emotional landscape of high-net-worth families with grace and unwavering strategy."</p>
+<p class="text-[10px] font-label uppercase tracking-[0.2em] text-on-surface-variant">— Global Philanthropist</p>
+</div>
+</div>
+</div>
+</section>
+<!-- Application Section -->
+<section class="py-32 bg-surface-container-low" id="apply">
+<div class="max-w-4xl mx-auto px-6 md:px-12">
+<div class="grid grid-cols-1 md:grid-cols-12 gap-16">
+<div class="md:col-span-4">
+<h2 class="text-5xl font-headline mb-8">Inquire.</h2>
+<p class="font-body text-on-surface-variant text-sm leading-relaxed mb-12">
+                            Engagement is by application only. To maintain the integrity of our partnership, we accept a limited number of clients per year.
+                        </p>
+</div>
+<div class="md:col-span-8">
+<form action="#" class="space-y-12">
+<div>
+<label class="text-[10px] font-label uppercase tracking-widest text-secondary mb-2 block">Full Name</label>
+<input class="w-full bg-transparent border-t-0 border-x-0 border-b border-outline-variant py-4 focus:ring-0 focus:border-primary transition-colors font-body text-lg placeholder:text-outline-variant/50" placeholder="Alexander Sterling" type="text"/>
+</div>
+<div>
+<label class="text-[10px] font-label uppercase tracking-widest text-secondary mb-2 block">Email Address</label>
+<input class="w-full bg-transparent border-t-0 border-x-0 border-b border-outline-variant py-4 focus:ring-0 focus:border-primary transition-colors font-body text-lg placeholder:text-outline-variant/50" placeholder="a.sterling@private.com" type="email"/>
+</div>
+<div>
+<label class="text-[10px] font-label uppercase tracking-widest text-secondary mb-2 block">Area of Focus</label>
+<select class="w-full bg-transparent border-t-0 border-x-0 border-b border-outline-variant py-4 focus:ring-0 focus:border-primary transition-colors font-body text-lg appearance-none">
+<option>The Legacy Programme</option>
+<option>The Clarity Session</option>
+<option>The Retainer</option>
+</select>
+</div>
+<div>
+<label class="text-[10px] font-label uppercase tracking-widest text-secondary mb-2 block">The Intent</label>
+<textarea class="w-full bg-transparent border-t-0 border-x-0 border-b border-outline-variant py-4 focus:ring-0 focus:border-primary transition-colors font-body text-lg placeholder:text-outline-variant/50 resize-none" placeholder="Briefly describe your vision for your legacy..." rows="4"></textarea>
+</div>
+<button class="bg-primary text-on-primary px-16 py-5 text-sm font-label uppercase tracking-[0.2em] hover:opacity-90 transition-opacity w-full md:w-auto" type="submit">
+                                Submit Application
+                            </button>
+</form>
+</div>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="bg-[#f0eee9] dark:bg-[#171612] w-full border-t border-[#ccc6bc]/20">
+<div class="flex flex-col md:flex-row justify-between items-center px-6 md:px-12 py-16 w-full max-w-7xl mx-auto">
+<div class="text-lg font-serif tracking-tighter mb-8 md:mb-0">NADIA OSEI</div>
+<div class="flex flex-col items-center md:items-end gap-6">
+<div class="flex gap-8 font-sans text-[10px] tracking-[0.2em] uppercase">
+<a class="text-[#171612]/50 dark:text-[#fbf9f4]/50 hover:text-[#171612] dark:hover:text-[#fbf9f4] transition-all" href="#">Privacy</a>
+<a class="text-[#171612]/50 dark:text-[#fbf9f4]/50 hover:text-[#171612] dark:hover:text-[#fbf9f4] transition-all" href="#">Terms</a>
+<a class="text-[#171612]/50 dark:text-[#fbf9f4]/50 hover:text-[#171612] dark:hover:text-[#fbf9f4] transition-all" href="#">Contact</a>
+</div>
+<p class="text-[#171612]/50 dark:text-[#fbf9f4]/50 font-sans text-[10px] tracking-[0.2em] uppercase text-center md:text-right">
+                    © 2024 NADIA OSEI. PRIVATE WEALTH COACHING. ALL RIGHTS RESERVED.
+                </p>
+</div>
+</div>
+</footer>
+</body></html>
